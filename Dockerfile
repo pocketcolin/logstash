@@ -8,7 +8,5 @@ COPY pipeline/ /usr/share/logstash/pipeline/
 COPY config/ /usr/share/logstash/config/
 RUN whoami
 USER root
-RUN chmod -R 664 /usr/share/logstash/config/
-RUN chown -R logstash:root /usr/share/logstash/config/
-USER logstash
-RUN ls -l /usr/share/logstash/config
+RUN chmod -R 664 /usr/share/logstash/config/logstash.yml
+RUN chown -R logstash:root /usr/share/logstash/config/logstash.yml
